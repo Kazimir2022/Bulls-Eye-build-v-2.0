@@ -16,23 +16,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3G-Ay-OuL">
-                                <rect key="frame" x="296" y="156" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Knf-kf-riy">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3G-Ay-OuL">
+                                <rect key="frame" x="283.5" y="318" width="100" height="37"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <size key="titleShadowOffset" width="0.0" height="1"/>
+                                <state key="normal" title="Hit me!!" backgroundImage="Button-Normal">
+                                    <color key="titleColor" red="0.37647058820000001" green="0.1176470588" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="Button-Highlighted">
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="2Re-Ih-pME">
+                                <rect key="frame" x="18" y="172.5" width="631" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6r-3A-rhj">
+                                <rect key="frame" x="20" y="159" width="10" height="19"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Zf-y2-ALc">
+                                <rect key="frame" x="622" y="159" width="29" height="19"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Knf-kf-riy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5xB-kb-Obh"/>
+                            <constraint firstItem="2Re-Ih-pME" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BGC-jb-OhM"/>
+                            <constraint firstItem="Knf-kf-riy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BL5-gf-V7U"/>
+                            <constraint firstAttribute="bottom" secondItem="Knf-kf-riy" secondAttribute="bottom" id="EZQ-Nd-uYB"/>
+                            <constraint firstItem="m6r-3A-rhj" firstAttribute="leading" secondItem="2Re-Ih-pME" secondAttribute="leading" id="Frt-52-xQ9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="t3G-Ay-OuL" secondAttribute="bottom" constant="20" id="RV7-89-W8N"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Re-Ih-pME" secondAttribute="trailing" constant="20" id="X11-nm-Toz" userLabel="Safe Area.trailing = Horizontal Slider.trailing + 40"/>
+                            <constraint firstItem="5Zf-y2-ALc" firstAttribute="baseline" secondItem="m6r-3A-rhj" secondAttribute="baseline" id="XTW-8P-gQy"/>
+                            <constraint firstItem="5Zf-y2-ALc" firstAttribute="leading" secondItem="m6r-3A-rhj" secondAttribute="trailing" constant="592" id="aOF-fF-4tR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="m6r-3A-rhj" secondAttribute="trailing" symbolic="YES" id="gMH-rU-U7U"/>
+                            <constraint firstItem="2Re-Ih-pME" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rr2-6W-D5i"/>
+                            <constraint firstAttribute="trailing" secondItem="Knf-kf-riy" secondAttribute="trailing" id="w1M-tq-hh9"/>
+                            <constraint firstItem="5Zf-y2-ALc" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2Re-Ih-pME" secondAttribute="trailing" id="wQZ-Fg-VyO"/>
+                            <constraint firstItem="m6r-3A-rhj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="159" id="xlO-vC-UzQ"/>
+                            <constraint firstItem="t3G-Ay-OuL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yaD-3v-TKm"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="68" y="-28"/>
+            <point key="canvasLocation" x="67.916041979010501" y="-28"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Background" width="568" height="320"/>
+        <image name="Button-Highlighted" width="100" height="37"/>
+        <image name="Button-Normal" width="100" height="37"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
