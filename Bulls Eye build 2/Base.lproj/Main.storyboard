@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3G-Ay-OuL">
-                                <rect key="frame" x="283.5" y="318" width="100" height="37"/>
+                                <rect key="frame" x="283.5" y="317" width="100" height="38"/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <size key="titleShadowOffset" width="0.0" height="1"/>
@@ -31,9 +31,15 @@
                                 <state key="highlighted" backgroundImage="Button-Highlighted">
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="checkResult" destination="BYZ-38-t0r" eventType="touchUpInside" id="GMI-3a-Hy3"/>
+                                </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="2Re-Ih-pME">
                                 <rect key="frame" x="18" y="172.5" width="631" height="31"/>
+                                <connections>
+                                    <action selector="sliderMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="KuU-F5-5ge"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6r-3A-rhj">
                                 <rect key="frame" x="20" y="159" width="10" height="19"/>
@@ -47,27 +53,101 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lo8-Hs-ddL">
+                                <rect key="frame" x="86" y="317" width="64" height="24"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHp-SH-Tck">
+                                <rect key="frame" x="160" y="317" width="48" height="24"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="target:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwx-MY-UYh">
+                                <rect key="frame" x="153" y="36" width="64.5" height="24"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCD-fl-Uwd">
+                                <rect key="frame" x="421" y="321" width="69" height="24"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruy-d7-2eo">
+                                <rect key="frame" x="506" y="323" width="48" height="24"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAa-bH-yJz">
+                                <rect key="frame" x="-11" y="310" width="97" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="start over"/>
+                                <connections>
+                                    <action selector="startNewGame" destination="BYZ-38-t0r" eventType="touchUpInside" id="ayP-pD-NXU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lq-7g-52y">
+                                <rect key="frame" x="583" y="312" width="53" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="info"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pno-8t-WnP">
+                                <rect key="frame" x="234" y="36" width="36" height="24"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pCD-fl-Uwd" secondAttribute="bottom" constant="30" id="598-6A-cWT"/>
                             <constraint firstItem="Knf-kf-riy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5xB-kb-Obh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ruy-d7-2eo" secondAttribute="trailing" constant="113" id="8yV-18-1kP"/>
+                            <constraint firstItem="lo8-Hs-ddL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="86" id="A34-VE-vds"/>
                             <constraint firstItem="2Re-Ih-pME" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BGC-jb-OhM"/>
                             <constraint firstItem="Knf-kf-riy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BL5-gf-V7U"/>
+                            <constraint firstItem="pno-8t-WnP" firstAttribute="baseline" secondItem="gwx-MY-UYh" secondAttribute="baseline" id="E3H-gt-FMY"/>
                             <constraint firstAttribute="bottom" secondItem="Knf-kf-riy" secondAttribute="bottom" id="EZQ-Nd-uYB"/>
                             <constraint firstItem="m6r-3A-rhj" firstAttribute="leading" secondItem="2Re-Ih-pME" secondAttribute="leading" id="Frt-52-xQ9"/>
+                            <constraint firstItem="pno-8t-WnP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gwx-MY-UYh" secondAttribute="trailing" constant="8" symbolic="YES" id="H7q-7u-7No"/>
+                            <constraint firstItem="gwx-MY-UYh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="153" id="JBt-qO-4Xy"/>
+                            <constraint firstItem="XHp-SH-Tck" firstAttribute="baseline" secondItem="lo8-Hs-ddL" secondAttribute="baseline" id="OrV-aq-TMX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="t3G-Ay-OuL" secondAttribute="bottom" constant="20" id="RV7-89-W8N"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pno-8t-WnP" secondAttribute="trailing" symbolic="YES" id="SOl-it-zmt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Re-Ih-pME" secondAttribute="trailing" constant="20" id="X11-nm-Toz" userLabel="Safe Area.trailing = Horizontal Slider.trailing + 40"/>
                             <constraint firstItem="5Zf-y2-ALc" firstAttribute="baseline" secondItem="m6r-3A-rhj" secondAttribute="baseline" id="XTW-8P-gQy"/>
+                            <constraint firstItem="XHp-SH-Tck" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lo8-Hs-ddL" secondAttribute="trailing" constant="8" symbolic="YES" id="Xwq-Hd-WXC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ruy-d7-2eo" secondAttribute="bottom" constant="28" id="ZBe-rI-y6H"/>
                             <constraint firstItem="5Zf-y2-ALc" firstAttribute="leading" secondItem="m6r-3A-rhj" secondAttribute="trailing" constant="592" id="aOF-fF-4tR"/>
+                            <constraint firstItem="pno-8t-WnP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="234" id="cgU-wl-7uG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="m6r-3A-rhj" secondAttribute="trailing" symbolic="YES" id="gMH-rU-U7U"/>
+                            <constraint firstItem="pCD-fl-Uwd" firstAttribute="leading" secondItem="t3G-Ay-OuL" secondAttribute="trailing" constant="37.5" id="ggu-yE-Ma5"/>
+                            <constraint firstItem="t3G-Ay-OuL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XHp-SH-Tck" secondAttribute="trailing" id="hSs-sE-piM"/>
                             <constraint firstItem="2Re-Ih-pME" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rr2-6W-D5i"/>
+                            <constraint firstItem="ruy-d7-2eo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pCD-fl-Uwd" secondAttribute="trailing" constant="8" symbolic="YES" id="u4l-jI-o8r"/>
+                            <constraint firstItem="ruy-d7-2eo" firstAttribute="baseline" secondItem="t3G-Ay-OuL" secondAttribute="baseline" id="vlw-YT-Ca0"/>
                             <constraint firstAttribute="trailing" secondItem="Knf-kf-riy" secondAttribute="trailing" id="w1M-tq-hh9"/>
                             <constraint firstItem="5Zf-y2-ALc" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2Re-Ih-pME" secondAttribute="trailing" id="wQZ-Fg-VyO"/>
+                            <constraint firstItem="XHp-SH-Tck" firstAttribute="top" secondItem="t3G-Ay-OuL" secondAttribute="top" id="xH2-fe-LZ8"/>
                             <constraint firstItem="m6r-3A-rhj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="159" id="xlO-vC-UzQ"/>
                             <constraint firstItem="t3G-Ay-OuL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yaD-3v-TKm"/>
+                            <constraint firstItem="pno-8t-WnP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="zaZ-fB-hLH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="roundLabel" destination="ruy-d7-2eo" id="ACJ-Dp-ds7"/>
+                        <outlet property="scoreLabel" destination="XHp-SH-Tck" id="d1r-Ve-BQm"/>
+                        <outlet property="slider" destination="2Re-Ih-pME" id="nUj-Ee-Qr0"/>
+                        <outlet property="targetLabel" destination="pno-8t-WnP" id="ONA-fu-w2y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
